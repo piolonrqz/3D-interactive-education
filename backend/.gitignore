@@ -30,3 +30,5 @@ Thumbs.db
 # Optional: if using build tools like TypeScript
 dist/
 build/
+
+seagle-auth-firebase-adminsdk-fbsvc-9423aedac7.json
