@@ -1,22 +1,27 @@
-
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
 import LoginPage from './pages/LoginPage.jsx';
 import RegisterPage from './pages/RegisterPage.jsx';
-import { useState } from 'react';
-import reactLogo from './assets/react.svg';
-import viteLogo from '/vite.svg';
-import './App.css';
+import Home from './pages/home';
+import Library from './pages/library';
+import Community from './pages/community';
+import Games from './pages/games';
+import Classes from './pages/classes';
 
 function App() {
   return (
-    <Router>
-      <Routes>
+    <Routes>
+      <Route path="/" element={<Home />}>
         <Route path="/" element={<LoginPage />} />
         <Route path="/register" element={<RegisterPage />} />
-        {/* Add more routes here as needed */}
-      </Routes>
-    </Router>
+        <Route path="library" element={<Library />} />
+        <Route path="community" element={<Community />} />
+        <Route path="games" element={<Games />} />
+        <Route path="classes" element={<Classes />} />
+      </Route>
+    </Routes>
+z
   );
 }
 
-export default App
+export default App;
